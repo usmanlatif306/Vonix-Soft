@@ -1,0 +1,726 @@
+html {
+  scroll-behavior: smooth;
+}
+.btn-contact {
+  border-radius: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+/******************** Loading *************************/
+.loading-body {
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #e74c3c;
+  position: relative;
+  animation: a1 2s linear infinite;
+}
+.loading::before,
+.loading::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.loading::before {
+  border-top: 10px solid #e67e22;
+  transform: rotate(120deg);
+}
+.loading::after {
+  border-top: 10px solid #3498db;
+  transform: rotate(240deg);
+}
+.loading span {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  line-height: 200px;
+  animation: a2 2s linear infinite;
+}
+@keyframes a1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/******************** Navigation *************************/
+.bgcolor.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navigation {
+  font-size: 20px;
+}
+.navigation .nav-item .nav-link {
+  color: #ffffff;
+}
+.navigation .nav-item .nav-link:hover {
+  color: red;
+}
+.navbar-brand {
+  font-size: 30px !important;
+  color: #ffffff !important;
+}
+
+/******************** Hero Section *************************/
+.banner {
+  background-image: url(vonix_soft_cover.jpg);
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img-overrely {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner-content {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  color: #fff;
+  text-align: left;
+}
+.banner-content h1 {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: Slide_Up 1.4s ease;
+}
+.banner-content h2 {
+  animation: Slide_Up 1.8s ease;
+}
+.banner-content span {
+  color: #e74c3c;
+}
+.banner-content span::before {
+  content: "";
+  animation: animate 10s infinite;
+}
+@keyframes animate {
+  0% {
+    content: "Website Development";
+  }
+  75% {
+    content: "Mobile App Development";
+  }
+  100% {
+    content: "UI/UX Design";
+  }
+}
+.banner-content p {
+  font-size: 1.2rem;
+  animation: Slide_Up 2.1s ease;
+}
+.banner-content a {
+  animation: Slide_Up 2.4s ease;
+}
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/******************** About Us *************************/
+.about-us h1,
+.services h1,
+.testimonials h1,
+.ourNumbers h1,
+.cources h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 80px;
+}
+.about-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: cursive;
+}
+.about-us h1 span,
+.services h1 span,
+.testimonials h1 span,
+.ourNumbers h1 span {
+  color: red;
+}
+.about-btn {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.74);
+  padding-right: 35px;
+}
+.about-btn:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+}
+.btn-about {
+  background-color: red;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+.btn-about:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.about-img {
+  height: 370px !important;
+  border-radius: 5px;
+}
+.main-about-img {
+  position: relative;
+}
+.image-overrelay {
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 5px solid red;
+  color: #ffffff;
+  padding: 40px 15px;
+}
+.image-overrelay ul {
+  margin-left: 20px;
+}
+.image-overrelay li {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/******************** Promotion *************************/
+.promotion {
+  background-image: url(https://i.pinimg.com/originals/25/05/99/2505996c4bd985ea2c3061db0c0e92c3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+/******************** Courses *************************/
+.card-img {
+  height: 221px !important;
+}
+/******************** Services *************************/
+.services {
+  background-color: whitesmoke;
+}
+.service-box {
+  height: 200px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.service-box:hover {
+  transform: rotateY(180deg);
+}
+.service-box figure {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+.service-box .front {
+  background-color: #ffffff;
+  color: red;
+  padding: 10%;
+  width: 100%;
+}
+.front i {
+  padding-bottom: 15px;
+  font-size: 35px;
+}
+.service-box .back {
+  position: relative;
+  background-color: #ffffff;
+  text-align: left;
+  padding: 25px 15px 0 15px;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+.back h5 {
+  color: red;
+}
+.back i {
+  color: rgba(255, 0, 0, 0.438);
+  position: absolute;
+  font-size: 130px;
+  left: 75%;
+  top: -20%;
+}
+/******************** Happy Customers *************************/
+.testimonials {
+  background-image: url(https://i.pinimg.com/originals/a6/07/99/a607999bc938671fc9b2e2f449edecce.jpg);
+  background-size: cover;
+  color: #fff;
+}
+.testimonials h1,
+.testimonials p {
+  color: #fff;
+}
+.carosel-single {
+  text-align: center;
+}
+.carosel-single img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  width: 200px;
+  border-radius: 50%;
+}
+.carosel-single p {
+  padding: 30px 60px 20px 60px;
+  margin-bottom: 0;
+}
+.carosel-single h3 {
+  color: red;
+}
+.carosel-single h6 {
+  font-weight: 500;
+}
+.carousel-indicators {
+  top: 100%;
+}
+
+/******************** Our Numbers *************************/
+.ourNumbers {
+  background-image: url(https://i.pinimg.com/originals/a6/07/99/a607999bc938671fc9b2e2f449edecce.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.coolEffect i,
+.coolEffect h2 {
+  font-size: 50px;
+}
+.coolEffect h2 {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 0;
+}
+.coolEffect p {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/******************** Contact Us *************************/
+.contact {
+  background-image: url(https://www.stuz.de/wp-content/uploads/2019/03/smartphone_coffetogo-820x394.jpg);
+  background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact h1 {
+  font-weight: bold;
+  padding-top: 80px;
+}
+.contact h1 span {
+  color: #ffb400;
+}
+.contact .container {
+  padding-left: 160px !important;
+}
+.name-row .name-field,
+.name-row .btn-field {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
+.name-row .name-field:focus,
+.messages-field textarea:focus,
+.btn-field:focus {
+  outline: none;
+}
+.name-row span {
+  padding: 15px 15px 16px;
+  border-radius: 10px 0 0 10px;
+  background-color: #ffb400;
+}
+.name-row .icon {
+  font-size: 20px;
+}
+.row-field {
+  width: 100% !important;
+  padding: 0 !important;
+}
+.messages-field textarea {
+  width: 98%;
+  margin: 20px 20px 10px 8px;
+  border-radius: 10px;
+  padding: 20px 20px 0;
+}
+.name-row .btn-field {
+  width: 98%;
+  border-radius: 10px;
+  background-color: #ffb400;
+  text-transform: uppercase;
+  color: #343a40 !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+.custom-color {
+  color: #343a40 !important;
+}
+/******************** Footer *************************/
+.tt {
+  font-size: 13px;
+  font-weight: 400;
+}
+.social {
+  border: 2px solid #fa5b0f;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: #fa5b0f;
+}
+.social:hover {
+  border: 2px solid #fa5b0f;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: white;
+  background-color: #fa5b0f;
+  transform: rotateY(720deg);
+  transition: 1s ease-in-out;
+}
+.color {
+  color: #fa5b0f;
+}
+.h5span {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #ddd;
+}
+.h5 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 15px 0 12px;
+}
+.hr {
+  width: 60px;
+}
+.main a {
+  color: #eeeeee;
+}
+.copyright {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/******************** Responsive *************************/
+
+@media all and (max-width: 1200px) and (min-width: 992px) {
+  .banner-content {
+    left: 20%;
+  }
+  .image-overrelay {
+    width: 425px;
+  }
+}
+/******************** Medium Devices *************************/
+@media all and (max-width: 991px) and (min-width: 769px) {
+  .banner-content {
+    left: 13%;
+  }
+  .about-us,
+  .services,
+  .testimonials,
+  .contact,
+  .ourNumbers {
+    height: auto;
+  }
+  .service-box {
+    height: auto;
+  }
+  .about-us,
+  .testimonials,
+  .ourNumbers {
+    margin-bottom: 30px;
+  }
+  .image-overrelay {
+    width: 630px;
+  }
+  .service-box .front {
+    padding-top: 35px;
+    padding-left: 10px;
+  }
+  .contact .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+  .carousel-inner {
+    padding-bottom: 20px;
+  }
+  .carosel-single p {
+    margin-bottom: 0;
+    padding-bottom: 10;
+  }
+  .carousel-indicators {
+    top: 93% !important;
+  }
+}
+
+@media all and (max-width: 835px) {
+  .banner-content {
+    left: 0%;
+  }
+}
+@media all and (max-width: 895px) {
+  .banner-content {
+    left: 5%;
+  }
+}
+/******************** Small Sevices *************************/
+@media all and (max-width: 768px) and (min-width: 540px) {
+  .banner-content {
+    left: 2%;
+  }
+  .about-us,
+  .services,
+  .testimonials,
+  .contact,
+  .ourNumbers {
+    height: auto;
+  }
+  .service-box {
+    height: auto;
+  }
+  .service-box .front {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-us h1,
+  .services h1,
+  .testimonials h1,
+  .ourNumbers h1 {
+    padding-top: 50px;
+  }
+  .about-us,
+  .testimonials,
+  .ourNumbers {
+    margin-bottom: 30px;
+  }
+  .image-overrelay {
+    width: 475px;
+  }
+  .service-box .front {
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+  .contact .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+  .carousel-inner {
+    padding-bottom: 20px;
+  }
+  .carosel-single p {
+    margin-bottom: 0;
+    padding-bottom: 10;
+  }
+  .carousel-indicators {
+    top: 93% !important;
+  }
+}
+@media all and (max-width: 672px) {
+  .banner-content h1 {
+    font-size: 3.5rem;
+  }
+}
+@media all and (max-width: 588px) {
+  .banner-content h1 {
+    font-size: 3.2rem;
+  }
+  .service-box .front {
+    padding-left: 60px;
+  }
+}
+/******************** Extra Small Sevices *************************/
+@media all and (max-width: 539px) and (min-width: 450px) {
+  .banner-content {
+    left: 0%;
+  }
+  .about-us,
+  .services,
+  .testimonials,
+  .contact,
+  .ourNumbers {
+    height: auto;
+  }
+
+  .service-box {
+    height: auto;
+  }
+  .about-us,
+  .testimonials,
+  .ourNumbers {
+    margin-bottom: 30px;
+  }
+  .about-us h1,
+  .services h1,
+  .testimonials h1,
+  .ourNumbers h1 {
+    padding-top: 50px;
+  }
+  .about-btn {
+    padding-right: 20px;
+  }
+  .image-overrelay {
+    width: 435px;
+  }
+  .service-box .front {
+    padding-left: 40px;
+  }
+  .contact .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+  .carousel-inner {
+    padding-bottom: 20px;
+  }
+  .carosel-single p {
+    margin-bottom: 0;
+    padding-bottom: 10;
+  }
+  .carousel-indicators {
+    top: 95% !important;
+  }
+}
+/******************** Extra Small Sevices *************************/
+@media all and (max-width: 495px) and (min-width: 450px) {
+  .image-overrelay {
+    width: 400px;
+  }
+}
+
+@media all and (max-width: 449px) {
+  .banner-content {
+    left: 1%;
+  }
+  .banner-content h1 {
+    font-size: 2.3rem;
+  }
+  .about-us,
+  .services,
+  .testimonials,
+  .contact,
+  .ourNumbers {
+    height: auto;
+  }
+  .service-box {
+    height: auto;
+  }
+  .about-us,
+  .testimonials,
+  .ourNumbers {
+    margin-bottom: 30px;
+  }
+  .about-us h1,
+  .services h1,
+  .testimonials h1,
+  .ourNumbers h1 {
+    padding-top: 50px;
+  }
+  .about-btn {
+    padding-right: 20px;
+  }
+  .image-overrelay {
+    width: 350px;
+  }
+  .service-box .front {
+    padding-left: 20px;
+  }
+  .contact .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+  .carousel-inner {
+    padding-bottom: 20px;
+  }
+  .carosel-single p {
+    margin-bottom: 0;
+    padding-bottom: 10;
+  }
+  .carousel-indicators {
+    top: 93% !important;
+  }
+}
+@media all and (max-width: 400px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .about-us,
+  .services,
+  .testimonials,
+  .contact,
+  .ourNumbers {
+    height: auto;
+  }
+  .service-box {
+    height: auto;
+  }
+  .about-us,
+  .testimonials,
+  .ourNumbers {
+    margin-bottom: 30px;
+  }
+  .image-overrelay {
+    width: 335px;
+  }
+
+  .service-box .front {
+    padding-top: 40px;
+    padding-left: 5px;
+  }
+  .name-row span {
+    display: none;
+  }
+  .name-row .name-field {
+    width: 95%;
+    border-radius: 25px;
+  }
+  .carousel-indicators {
+    top: 95% !important;
+  }
+}

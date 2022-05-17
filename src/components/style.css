@@ -1,0 +1,10 @@
+/* .cources {
+  width: 100%;
+} */
+.cources h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.card-img {
+  height: 221px !important;
+}
